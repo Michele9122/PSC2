@@ -1,0 +1,65 @@
+﻿<style>
+    .hidedata {
+        padding-top: 50px;
+    }
+</style>
+<div class="row">
+
+    <div class="col-md-12">
+        <div class="col-md-8 col-lg-offset-4">
+            <h3>Inserisci dettagli nuovo corso</h3>
+        </div>
+
+        <div class="row hidedata" id="hidDiv">
+            <div class="col-md-6 ">
+                <form class="form-horizontal" [formGroup]="formData" (ngSubmit)="submitData()">
+                    <div class="form-group">
+                        <label for="corsoId" class="col-sm-4 control-label">Corso ID</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control"
+                                   name="corsoId" placeholder="Corso ID"
+                                   formControlName="corsoId">
+                        </div>
+                        <div *ngIf="!formData.get('corsoId').valid && formData.get('corsoId').dirty"
+                             class="col-sm-8 col-sm-offset-4" style="color:red">
+                               Inserisci l'identificativo del corso
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="titolo" class="col-sm-4 control-label">titolo</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control"
+                                   name="titolo" placeholder="Titolo"
+                                   formControlName="titolo">
+                        </div>
+                        <div *ngIf="!formData.get('titolo').valid && formData.get('titolo').dirty"
+                             class="col-sm-8 col-sm-offset-4" style="color:red">
+                            Inserisci il nome del corso
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="durataAnni" class="col-sm-4 control-label">Durata Anni</label>
+                        <div class="col-sm-8">
+                            <input type="number" class="form-control"
+                                   name="durataAnni" placeholder="Durata Anni"
+                                   formControlName="durataAnni">
+
+                        </div>
+                        <div *ngIf="!formData.get('durataAnni').valid && formData.get('DurataAnni').dirty"
+                             class="col-sm-8 col-sm-offset-4" style="color:red">
+                            Inserisci la Durata in Anni
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-4 col-sm-8">
+                            <button type="submit" [disabled]="!formData.valid" class="btn btn-info">Submit</button>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+
+
+    </div>
+</div> 

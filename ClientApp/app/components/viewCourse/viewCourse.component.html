@@ -1,0 +1,65 @@
+﻿<!--<div class="row">
+    <div class="col-md-12">
+        <h3>Lista dei Corsi</h3>
+        <br />
+        <br />
+        <br />
+    </div>
+
+</div>
+<div class="row">
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        S.No.
+                    </th>
+                    <th>
+                        ID
+                    </th>
+                    <th>
+                        Titolo
+                    </th>
+                    <th>
+                        Durata Anni
+                    </th>
+                    <th>
+                        Azioni
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr *ngFor="let empData of CourseList; let i = index; trackBy: corsoId">
+                    <td>
+                        {{i+1}}
+                    </td>
+                    <td>
+                        {{empData.corsoId}}
+                    </td>
+                    <td>
+                        {{empData.titolo}}
+                    </td>
+                    <td>
+                        {{empData.durataAnni}}
+                    </td>
+                    <td>
+
+                        <a [routerLink]="['/course-detail/',empData.corsoId]"
+                           class="btn btn-primary">
+                            Dettagli
+                        </a>
+                        <a [routerLink]="['/edit-course/',empData.corsoId]"
+                           class="btn btn-success">
+                            Modifica
+                        </a>
+                        <a class="btn btn-danger">
+                            Elimina
+                        </a>
+                    </td>
+                </tr>
+
+        </table>
+    </div>
+</div>  -->
